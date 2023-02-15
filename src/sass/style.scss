@@ -5,10 +5,21 @@
 }
 
 .container {
-max-width: 950px;
-margin: 0 auto;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: $text-black;
 }
 
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/button';
+@import 'blocks/advantages';
+
+
+@import 'base/media';
