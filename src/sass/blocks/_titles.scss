@@ -1,0 +1,13 @@
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: $text-black;
+    text-transform: uppercase;
+    &_white {
+        font-size: 36px;
+        text-align: left;
+        line-height: 50px;
+        color: $text-white;
+    }
+}
