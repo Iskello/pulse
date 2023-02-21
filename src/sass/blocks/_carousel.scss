@@ -21,4 +21,25 @@
         left: auto;
         right: -66px;
     }
+    .slick-dots {        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            list-style-type: none;
+            margin: 10px 10px;
+        }
+        button {
+            font-size: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #fff;
+            border-radius: 100%;
+        }
+        .slick-active button {
+            border: none;
+            background-color: grey;
+        }
+    }
+    
 }
