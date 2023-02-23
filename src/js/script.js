@@ -49,6 +49,97 @@ $(document).ready(function(){
       toggleSlide('.catalog-item__link');
       toggleSlide('.catalog-item__back');
 
+      // Modal
+      $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+      });
+      $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+      });
+      /* $('.button_mini').on('click', function() {
+        $('.overlay, #order').fadeIn('slow');
+      }); */
+      $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+          $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+          $('.overlay, #order').fadeIn('slow');
+        });
+      });
+
+
+      /* $('#consultation form').validate({
+        rules:{
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: {
+            required: true,
+            number: true
+          },
+          email: {
+            required: true,
+            minlength: 2,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Будь-ласка, введіть ім'я",
+            minlength: jQuery.validator.format("Ім'я повинно містити мінімум {0} символи")
+          },
+          phone: {
+            required: "Будь-ласка, введіть номер телефону",
+            number: "Введіть актуальний номер"
+          },
+          email : {
+            required: "Будь-ласка, введіть імейл",
+            email: "Поштова адреса повинна бути у форматі name@domain.com"
+          }
+        }
+      });
+
+      $('#order form').validate();
+      $('#consultation-form').validate(); */
+      
+      function validateForms(form) {
+        $(form).validate({
+          rules:{
+            name: {
+              required: true,
+              minlength: 2
+            },
+            phone: {
+              required: true
+            },
+            email: {
+              required: true,
+              minlength: 2,
+              email: true
+            }
+          },
+          messages: {
+            name: {
+              required: "Будь-ласка, введіть ім'я",
+              minlength: jQuery.validator.format("Ім'я повинно містити мінімум {0} символи")
+            },
+            phone: {
+              required: "Будь-ласка, введіть номер телефону"
+            },
+            email : {
+              required: "Будь-ласка, введіть імейл",
+              email: "Поштова адреса повинна бути у форматі name@domain.com"
+            }
+          }
+        });
+      };
+
+      validateForms('#consultation-form');
+      validateForms('#consultation form');
+      validateForms('#order form');
+
+      $('input[name=phone]').mask("+38 (999) 999-99-99");
+      
   });
 
 
