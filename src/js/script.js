@@ -164,7 +164,27 @@ $(document).ready(function(){
         });
         return false;
       });
-      
+
+      //Smooth Scroll
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 1500) {
+          $('.pageup').fadeIn();
+        } else {
+          $('.pageup').fadeOut();
+        } 
+      });
+
+      $('a[href^="#"').on('click', function() {
+        let href = $(this).attr('href');    
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        });
+        return false;
+    });
+
+    //animate
+    new WOW().init();
+          
   });
 
 
