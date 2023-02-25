@@ -127,9 +127,7 @@
         }
         &__list {
             position: relative;
-            padding-left: 19px;
-            margin-bottom: 0;
-            list-style-type: none;
+            margin-bottom: 0;            
             width: 50%;
             margin-left: 20px;
             padding-right: 20px;
@@ -138,6 +136,10 @@
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
+            }
+            ul {
+                list-style-type: none;
+                padding-left: 19px;
             }
             li {
                 position: relative;
@@ -152,7 +154,7 @@
                     width: 5px;
                     height: 5px;
                     background-color: $main-color;
-                    left: -14px;
+                    left: -20px;
                     top: 7px;
                 }
             }
