@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse</title>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/font.css">    
-    <link rel="stylesheet" href="css/slick.css"> 
-    <link rel="stylesheet" href="css/animate.min.css">   
+    <title>Pulse</title>    
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -48,7 +44,7 @@
                 <button class="button button_main" data-modal="consultation">заказать консультацию</button>
                 <div class="promo__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
@@ -104,7 +100,7 @@
         </div>
     </div>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -388,7 +384,7 @@
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
             <div class="review__wrapper">
-                <div class="review__item animate__animated animate__fadeInUp wow data-wow-duration="1s" data-wow-delay="1s" ">
+                <div class="review__item animate__animated animate__fadeInUp wow">
                     <div class="review__img"><img src="img/ava1.webp" alt="photo"></div>
                     <div class="review__descr">
                         <h3>Ирина Иванченко</h3>
@@ -402,7 +398,7 @@
                         </h4>
                     </div>
                 </div>
-                <div class="review__item animate__animated animate__fadeInUp wow data-wow-duration="1s" data-wow-delay="1s" ">
+                <div class="review__item animate__animated animate__fadeInUp wow">
                     <div class="review__img"><img src="img/ava2.webp" alt="photo"></div>
                     <div class="review__descr">
                         <h3>Иван Сёмочкин</h3>
@@ -414,7 +410,7 @@
                         </h4>
                     </div>
                 </div>
-                <div class="review__item animate__animated animate__fadeInUp wow data-wow-duration="1s" data-wow-delay="1s" ">
+                <div class="review__item animate__animated animate__fadeInUp wow">
                     <div class="review__img"><img src="img/ava3.webp" alt="photo"></div>
                     <div class="review__descr">
                         <h3>Юлия Дашкина</h3>
@@ -443,6 +439,8 @@
             </div>
         </div>
     </footer>
+
+    <a href="#up" class="pageup"><img src="icons/circle-chevron-up-solid.svg" alt="up"></a>
 
     <div class="overlay">
         <div class="modal" id="consultation">
@@ -476,9 +474,7 @@
         </div>
     </div>
 
-    <a href="#up" class="pageup"><img src="icons/circle-chevron-up-solid.svg" alt="up"></a>
-
-
+    
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>

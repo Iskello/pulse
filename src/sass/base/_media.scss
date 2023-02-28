@@ -270,6 +270,7 @@
         }
     } 
     .carousel {
+        padding-bottom: 40px;
         &__inner {
             width: 90%;
             img {
@@ -300,7 +301,39 @@
         }
         &__phone {
             margin-bottom: 30px;
-        }
+        }    
     }
-    
+    .modal {
+        width: 280px;
+        padding: 20px;
+        margin-top: 10px;
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+        .feed-form {
+            width: 240px;
+            font-size: 12px;
+        }
+        &__close {
+            position: absolute;
+            top: 0;
+            right: -40px;
+            font-size: 40px;
+            line-height: 20px;
+        }
+    }    
+       
+}
+@media (max-width:360px) {
+    .modal__close {
+        position: absolute;
+        top: 0;
+        right: -22px;
+        font-size: 40px;
+        line-height: 20px;
+
+    }
 }
